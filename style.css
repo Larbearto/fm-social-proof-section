@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  font-size: 16px;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* colors */
+
+:root {
+  --VeryDarkMagenta: hsla(300, 43%, 22%, 1);
+  --SoftPink: hsla(333, 80%, 67%, 1);
+  --DarkGrayishMagenta: hsla(303, 10%, 53%, 1);
+  --LightGrayishMagenta: hsla(300, 24%, 96%, 1);
+  --White: hsla(0, 0%, 100%, 1);
+  --cardWidth: 350px;
+  --intro: 420px;
+  --containerWidth: 1111px;
+  --XmenBlue: #1d90f3;
+  --XmenYellow: #fffe03;
+  --XmenRed: #f94115;
+  --XmenBeige: #fcd1a9;
+  --XmenBlack: #0e1113;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.3;
+  text-rendering: optimizeLegibility;
+  font-family: 'League Spartan', sans-serif;
+  background-image: url('/images/bg-pattern-top-desktop.svg'),
+    url('/images/bg-pattern-bottom-desktop.svg');
+  background-position: left -185px top -236px, right 10px bottom -300px;
+  background-repeat: no-repeat, no-repeat;
+
+  background-attachment: fixed, fixed;
+  background-size: contain, contain;
+  background-color: #111927;
+  background-image: radial-gradient(at 47% 33%, #666666, transparent 59%),
+    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+}
+
+/* Headings and Fonts */
+
+h1 {
+  font-weight: bolds;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: var(--XmenBlack);
+  max-width: 350px;
+  padding-bottom: 1.2rem;
+  transition: ease-in-out 0.6s;
+}
+
+h1:hover {
+  color: var(--XmenYellow);
+  transition: ease-in-out 0.6s;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--XmenBeige);
+}
+.xavier {
+  margin: 1rem;
+  position: relative;
+}
+.product__header p {
+  font-weight: 400;
+  font-size: 1rem;
+  align-self: baseline;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: var(--White);
+  max-width: 480px;
+}
+
+.container {
+  max-width: 1111px;
+  margin: 3.375rem 1.5rem;
+}
+
+/* Rating Section  */
+
+.product__ad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding-bottom: 3rem;
+}
+
+.rating__review {
+  display: flex;
+  gap: 36px;
+  width: 28.125rem;
+  align-items: center;
+  padding: 2px 2px;
+  color: var(--XmenYellow);
+  background-color: #7eb97e;
+  border-radius: 0.5rem;
+  transition: ease-in-out 0.6s;
+}
+
+.rating__review + .rating__review {
+  margin-top: 16px;
+}
+
+.rating__review:hover {
+  filter: saturate(3);
+  transform: translateX(-48px);
+}
+
+.rating__stars {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  transition: ease-in-out 0.6s;
+}
+
+.ml--48 {
+  margin-left: 3rem;
+}
+
+.ml--96 {
+  margin-left: 6rem;
+}
+
+.mt--24 {
+  margin-top: 2.5rem;
+}
+
+.mt--48 {
+  margin-top: 5rem;
+}
+
+.fa-solid {
+  color: var(--XmenBlack);
+}
+
+/* Testimonials */
+
+.card__testimonials {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+}
+
+.card__profile__photo img {
+  display: block;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.card__testimonial {
+  padding: 2.5rem 2.25rem;
+  border-radius: 10px;
+  background-color: var(--XmenBlack);
+  transition: ease-in-out 3s;
+}
+
+.cyclops {
+  border-radius: 52px;
+  background: linear-gradient(145deg, #1f9aff, #1a82db);
+  box-shadow: 24px 24px 47px #0c3a61, -24px -24px 47px #2ee6ff;
+  color: #0e1113;
+}
+.wolverine {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffff03, #e6e503);
+  box-shadow: 50px 50px 100px #666601, -50px -50px 100px #ffff05;
+}
+.wolverine__text > h3,
+h4,
+p {
+  color: black;
+}
+.rogue {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ff4616, #e03b13);
+  box-shadow: 50px 50px 100px #641a08, -50px -50px 100px #ff6822;
+}
+
+.card__testimonial:hover {
+  transform: translateY(-50px);
+  transition: ease-in-out 2s;
+  filter: brightness(1.3);
+  background-color: rgb(122, 8, 57);
+}
+
+.card__user__info {
+  display: flex;
+  flex-direction: row;
+  gap: 1.125rem;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1;
+  padding-top: 0.2rem;
+  color: var(--SoftPink);
+}
+
+.user-testimonial {
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: -0.232143px;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 1250px) {
+  .product__ad {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  h1,
+  .product__header p {
+    max-width: 100%;
+    margin: 0 140px;
+    text-align: center;
+  }
+  .ratings {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+  }
+}
